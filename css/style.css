@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+body,
+button {
+  font-family: "Inter", sans-serif;
+}
+:root {
+  --offcanvas-width: 270px;
+  --topNavbarHeight: 56px;
+}
+.sidebar-nav {
+  width: var(--offcanvas-width);
+}
+.navbar-header{
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 0.5rem 1rem, rgba(0, 0, 0, 0.15) 0px -1px 0px inset;
+}
+
+@media (min-width: 992px){
+    .offcanvas-backdrop::before{
+        display: none;
+    }
+    .main{
+        margin-left: var(--offcanvas-width);
+    }
+    .sidebar-nav{
+        transform: none;
+        visibility: visible !important;
+        top: 68px;
+    }
+}
+
+.sidebar-link [aria-expanded="true"] .right-icon {
+    transform: rotate(180deg);
+}
+
+/* batch  */
+.table-card{
+  padding: 1.5rem;
+  margin: 1rem;
+}
+.table>:not(:last-child)>:last-child>* {
+    border-bottom-color: currentColor;
+}
